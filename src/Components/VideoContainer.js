@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { YOUTUBE_VIDEOS_API } from "./Constant";
+import { YOUTUBE_VIDEOS_API } from "../utils/Constant";
 import VideoCart from "./VideoCart";
 import { Link } from "react-router-dom";
 
@@ -19,7 +19,9 @@ const getVideos = async() => {
  return(
         <div className="flex flex-wrap">
             {videos.map((video) => (
-            <Link to = {"/watch?v="+video.id}><VideoCart key = {video.id} info = {video}/></Link>
+            <Link key = {video.id} to = {"/watch?v="+video.id} >
+            <VideoCart  info = {video}/>
+            </Link>
             ))}
            
         </div>
