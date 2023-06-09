@@ -13,7 +13,7 @@ const VideoCart = ({ info }) => {
       <ul>
         <li className='font-bold py-2'>{channelTitle}</li>
         <li>{title}</li>
-        <li>{statistics.viewCount} views</li>
+        <li>{statistics.viewCount}views</li>
       </ul> 
 
     </div>
